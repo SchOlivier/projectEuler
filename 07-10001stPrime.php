@@ -5,8 +5,6 @@
 $nth = 101;
 $n = $nth ** 2;
 
-$something = false;
-
 // init primes :
 $primes = array_fill(2, $nth, true);
 for ($i = 2; $i <= $nth; $i++) {
@@ -43,14 +41,4 @@ function getLowestMultiple(int $prime, int $min): int
 {
     if($min % $prime == 0) return $min;
     return $min + $prime - $min % $prime;
-}
-
-
-$primes = array_fill(2, $n, true);
-for ($i = 2; $i <= $nth; $i++) {
-    if ($primes[$i]) {
-        for ($j = $i ** 2; $j <= $n; $j += $i) {
-            $primes[$j] = false;
-        }
-    }
 }
