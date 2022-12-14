@@ -1,1 +1,2 @@
-assets/primes/
+assets/primes/*
+!assets/primes/000
