@@ -35,7 +35,7 @@ $handle = fopen('assets/67-triangle.txt', 'r+');
 
 $triangle = [];
 while (($line = fgets($handle)) !== false) {
-    $line = preg_replace('/0(\d)/', '$1', $line);
+    $line = preg_replace('/0(\d)/', '$1', $line); // Removing leading zeroes
     $triangle[] = explode(' ', $line);
 }
 
